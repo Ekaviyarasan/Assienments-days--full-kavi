@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport content=width-dives-width initial scale=1-0">
+        <title>event</title>
+    </head>
+    <body>
+        <button id="alert btn">click</button>
+        
+        <script>
+            document.getElementById("alert btn").addEventListener("click",function (){
+                alert("server busy");
+
+            }
+        );
+
+        </script>
+    </body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mouse Events</title>
+</head>
+<body>
+
+  <div id="box" style="width:200px; height:200px; background-color:lightgray;">
+    Hover over me
+  </div>
+
+  <script>
+    const box = document.getElementById("box");
+
+    box.addEventListener("mouseover", function () {
+      box.style.backgroundColor = "pink";
+    });
+
+    box.addEventListener("mouseout", function () {
+      box.style.backgroundColor = "lightgray";
+    });
+  </script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Keydown Event</title>
+</head>
+<body>
+
+  <script>
+    document.addEventListener("keydown", function (event) {
+      console.log("Key pressed:", event.key);
+    });
+  </script>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Live Input</title>
+</head>
+<body>
+
+  <input type="text" id="myInput" placeholder="Type here">
+  <p id="output"></p>
+
+  <script>
+    document.getElementById("myInput").addEventListener("input", function () {
+      document.getElementById("output").innerText = this.value;
+    });
+  </script>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prevent Form Submit</title>
+</head>
+<body>
+
+  <form id="myForm">
+    <input type="text" placeholder="Enter name" required>
+    <button type="submit">Submit</button>
+  </form>
+
+  <p id="message"></p>
+
+  <script>
+    document.getElementById("myForm").addEventListener("submit", function (event) {
+      event.preventDefault(); // stop form submission
+      document.getElementById("message").innerText = "Form submission prevented!";
+    });
+  </script>
+
+</body>
+</html>
+

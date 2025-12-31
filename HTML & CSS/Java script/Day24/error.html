@@ -1,0 +1,47 @@
+<!-- Error
+ error is an exceptional condition that occurs when something goes wrong while running code
+  -->
+
+
+  <!-- types of error
+  !syntex error
+  ! runtime error
+  ! logical error
+  ! custom error 
+  
+  -->
+
+  
+  
+Runtime errors cause the program to stop unless handled because JavaScript throws an exception.
+
+Logical errors do not throw exceptions — your code runs but doesn’t do what you expect. 
+
+
+try
+
+Wraps the code that might throw an error. JavaScript attempts to run this code. 
+programguru.org
+
+🔹 catch
+
+Runs if an error is thrown in the try block. The thrown error object is passed into the catch block so you can respond to it (e.g., log it or show a message). 
+programguru.org
+
+🔹 finally
+
+Always executes after the try and catch, regardless of whether an error occurred. Use it for cleanup tasks (like closing a connection)
+
+
+
+
+
+
+
+
+
+
+It stops normal execution and passes control to the nearest catch block (if there is one). 
+GeeksforGeeks
+
+You can throw built-in Error objects (new Error("message")) or any value (string, number, object).

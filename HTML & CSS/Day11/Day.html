@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Flex align-self Example</title>
+<style>
+  .container {
+    display: flex;
+    align-items: center; /* default alignment for all items */
+    height: 200px;
+    background: #eee;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .item {
+    background: #4a90e2;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .item.special {
+    align-self: flex-start; /* override alignment for this item only */
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="item">Item 1</div>
+  <div class="item special">Item 2</div> <!-- special alignment -->
+  <div class="item">Item 3</div>
+</div>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>2-Column Grid</title>
+<style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* First column smaller, second larger */
+    gap: 16px;
+    padding: 20px;
+    background: #f5f5f5;
+  }
+
+  .box {
+    background: #4a90e2;
+    padding: 20px;
+    color: #fff;
+    border-radius: 8px;
+  }
+</style>
+</head>
+<body>
+
+<h2>Column </h2>
+
+<div class="grid-container">
+  <div class="box">Column 1 Content</div>
+  <div class="box">Column 2 Content</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Flex — space-evenly</title>
+  <style>
+    .flex-row {
+      display: flex;
+      justify-content: space-evenly; /* <--- equal space around items */
+      align-items: center;           /* vertically center items in the row */
+      gap: 12px;                     /* optional: consistent gap between items (works with flex) */
+      padding: 20px;
+      background: #f6f8fa;
+    }
+
+    .box {
+      min-width: 80px;
+      padding: 12px 18px;
+      border-radius: 8px;
+      background: white;
+      border: 1px solid #ddd;
+      text-align: center;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+
+    /* small-screen stack fallback */
+    @media (max-width: 480px) {
+      .flex-row {
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="flex-row">
+    <div class="box">Item 1</div>
+    <div class="box">Item 2</div>
+    <div class="box">Item 3</div>
+  </div>
+</body>
+</html>

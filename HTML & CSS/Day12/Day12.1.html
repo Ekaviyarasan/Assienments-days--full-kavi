@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>3-Item Card Row</title>
+  <style>
+    :root{
+      --gap: 20px;
+      --card-bg: #ffffff;
+      --card-border: #e6e6e6;
+      --card-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      --radius: 12px;
+      --pad: 18px;
+    }
+
+    /* page layout for demo */
+    body{
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:#f6f7fb;
+      margin: 32px;
+      color:#111;
+    }
+
+    /* flex row with equal-width children and 20px gap */
+    .card-row{
+      display: flex;
+      gap: var(--gap);        /* 20px gap between items */
+      align-items: stretch;   /* equal height cards if content differs */
+    }
+
+    /* each card takes equal available width */
+    .card{
+      flex: 1 1 0%;           /* grow and shrink equally, base 0 -> equal widths */
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      box-shadow: var(--card-shadow);
+      padding: var(--pad);
+      min-width: 0;           /* prevents overflow of long content inside flex items */
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .card h3{
+      margin: 0;
+      font-size: 1.05rem;
+    }
+
+    .card p{
+      margin: 0;
+      line-height: 1.4;
+      color: #444;
+      font-size: .95rem;
+    }
+
+    .card .btn{
+      margin-top: auto;       /* push button to bottom for equal visual alignment */
+      align-self: start;
+      padding: 8px 14px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      background: #2563eb;
+      color: white;
+      font-weight: 600;
+      font-size: .95rem;
+    }
+
+    /* small responsive tweak: stack on narrow screens */
+    @media (max-width: 640px){
+      .card-row{
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card-row" aria-label="Three equal-width cards">
+    <article class="card">
+      <h3>Card One</h3>
+      <p>Short description or content for the first card. The cards are equal width automatically.</p>
+      <button class="btn">Action</button>
+    </article>
+
+    <article class="card">
+      <h3>Card Two</h3>
+      <p>Another card — longer content will wrap but widths remain equal because of <code>flex: 1 1 0%</code>.</p>
+      <button class="btn">Action</button>
+    </article>
+
+    <article class="card">
+      <h3>Card Three</h3>
+      <p>Third card content.</p>
+      <button class="btn">Action</button>
+    </article>
+  </div>
+
+</body>
+</html>

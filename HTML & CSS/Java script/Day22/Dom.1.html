@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Append List Items</title>
+</head>
+<body>
+
+  <ul id="myList"></ul>
+
+  <button onclick="addItems()">Add Items</button>
+
+  <script>
+    function addItems() {
+      const list = document.getElementById("myList");
+
+      const item1 = document.createElement("li");
+      item1.innerText = "Item 1";
+
+      const item2 = document.createElement("li");
+      item2.innerText = "Item 2";
+
+      const item3 = document.createElement("li");
+      item3.innerText = "Item 3";
+
+      list.appendChild(item1);
+      list.appendChild(item2);
+      list.appendChild(item3);
+    }
+  </script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Remove First List Item</title>
+</head>
+<body>
+
+  <ul id="myList">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul>
+
+  <button onclick="removeFirstItem()">Remove First Item</button>
+
+  <script>
+    function removeFirstItem() {
+      const list = document.getElementById("myList");
+      const firstItem = list.firstElementChild;
+
+      if (firstItem) {
+        list.removeChild(firstItem);
+      }
+    }
+  </script>
+
+</body>
+</html>

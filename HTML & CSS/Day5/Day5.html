@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Page with Google Map</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+      color: #333;
+    }
+    header, footer {
+      background: #222;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+    }
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    section {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    iframe {
+      width: 100%;
+      height: 350px;
+      border: 0;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+    form div {
+      margin-bottom: 12px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    button {
+      padding: 10px 18px;
+      font-size: 1rem;
+      border: none;
+      background: #222;
+      color: #fff;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #444;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Contact Us</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Our Location</h2>
+      <p>You can find us at the location shown on the map below:</p>
+
+      <!-- Google Maps Embed -->
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387144.00758366824!2d-74.25819602718444!3d40.70583164054536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQyJzIxLjAiTiA3NMKwMTQnMjEuNSJX!5e0!3m2!1sen!2sus!4v1700000000000"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </section>
+
+    <section>
+      <h2>Send Us a Message</h2>
+      <form>
+        <div>
+          <label>Name</label>
+          <input type="text" placeholder="Your Name" required>
+        </div>
+        <div>
+          <label>Email</label>
+          <input type="email" placeholder="Your Email" required>
+        </div>
+        <div>
+          <label>Message</label>
+          <textarea rows="5" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Contact Page Example</p>
+  </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Semantic Blog Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header, footer {
+      background: #222;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+    }
+    nav {
+      background: #444;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    section {
+      margin-bottom: 30px;
+    }
+    article {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    h2 {
+      margin-top: 0;
+    }
+    video {
+      width: 100%;
+      border-radius: 8px;
+      margin: 15px 0;
+    }
+    aside {
+      background: #fafafa;
+      padding: 15px;
+      border-left: 4px solid #222;
+      margin-top: 20px;
+      border-radius: 6px;
+    }
+    aside ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    aside li {
+      margin-bottom: 8px;
+    }
+    aside a {
+      text-decoration: none;
+      color: #0066cc;
+    }
+    footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Blog</h1>
+    <p>A semantic HTML blog layout with multimedia content</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#articles">Articles</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section id="articles">
+      <h2>Featured Article</h2>
+
+      <article>
+        <h3>The Power of Visual Learning</h3>
+        <p>Multimedia elements like videos make learning more engaging and effective. Below is an example video embedded inside an article.</p>
+
+        <video controls>
+          <source src="sample-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        <p>
+          This video demonstrates how visual explanations improve understanding. Videos help break down concepts and keep readers engaged longer.
+        </p>
+
+        <aside>
+          <h4>Related Links</h4>
+          <ul>
+            <li><a href="#">How to Use Multimedia in Education</a></li>
+            <li><a href="#">Improving Learning Through Visuals</a></li>
+            <li><a href="#">Top Tools for Video Creation</a></li>
+          </ul>
+        </aside>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 My Blog. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Blog Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header, nav, section, article, footer {
+            padding: 20px;
+            margin: 10px;
+        }
+        header, footer {
+            background: #f4f4f4;
+        }
+        nav {
+            background: #333;
+            color: #fff;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .video-container {
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>My Tech Blog</h1>
+        <p>Insights, Tutorials, and Multimedia Articles</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#articles">Articles</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="articles">
+        <h2>Featured Multimedia Article</h2>
+
+        <article>
+            <h3>How AI is Changing the Future</h3>
+            <p>This article includes a short video explaining how Artificial Intelligence is transforming industries worldwide.</p>
+
+            <div class="video-container">
+                <video width="100%" controls>
+                    <source src="video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <p>AI continues to evolve rapidly, influencing technology, healthcare, education, and entertainment. The video above gives a quick overview of these advancements.</p>
+
+            <section>
+                <h4>Related Links</h4>
+                <ul>
+                    <li><a href="#">What is Machine Learning?</a></li>
+                    <li><a href="#">Top 10 AI Tools in 2025</a></li>
+                    <li><a href="#">Future of Robotics</a></li>
+                </ul>
+            </section>
+        </article>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 My Tech Blog. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

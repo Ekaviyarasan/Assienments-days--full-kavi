@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* 2 columns */
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .box {
+      background: lightcoral;
+      padding: 20px;
+      text-align: center;
+      font-size: 20px;
+      border-radius: 8px;
+    }
+
+    /* At 768px and smaller → switch to 1 column */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr; /* 1 column */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="box">Never</div>
+    <div class="box">Ever</div>
+  </div>
+
+</body>
+</html>
