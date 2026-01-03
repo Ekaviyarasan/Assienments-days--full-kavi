@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS Practice</title>
+</head>
+<body>
+
+  <h2>Users Emails</h2>
+  <ul id="userList"></ul>
+
+  <h2>Save Username</h2>
+  <input type="text" id="username" placeholder="Enter name">
+  <button onclick="saveName()">Save</button>
+  <p id="savedName"></p>
+
+  <h2>Geolocation</h2>
+  <button onclick="getLocation()">Get Location</button>
+  <p id="location"></p>
+
+  <script>
+    
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then(res => res.json())
+      .then(users => {
+        const list = document.getElementById("userList");
+        users.forEach(user => {
+          const li = document.createElement("li");
+          li.textContent = user.email;
+          list.appendChild(li);
+        });
+      });
+
+    function saveName() {
+      const name = document.getElementById("username").value;
+      localStorage.setItem("username", name);
+      displayName();
+    }
+
+
+    function displayName() {
+      const saved = localStorage.getItem("username");
+      if (saved) {
+        document.getElementById("savedName").innerText =
+          "Saved Name: " + saved;
+      }
+    }
+    displayName();
+
+
+    const userObj = { name: "Arasan", age: 23 };
+    const jsonData = JSON.stringify(userObj);
+    const parsedData = JSON.parse(jsonData);
+    console.log(jsonData);     
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(position => {
+          document.getElementById("location").innerText =
+            "Latitude: " + position.coords.latitude +
+            ", Longitude: " + position.coords.longitude;
+        });
+      } else {
+        alert("Geolocation not supported");
+      }
+    }
+  </script>
+
+</body>
+</html>
