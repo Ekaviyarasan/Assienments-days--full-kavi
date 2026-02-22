@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HTML & CSS Practice">
+    <title>Information</title>
+
+
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: darkblue;
+        }
+
+        .box {
+            background: lightblue;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        #special {
+            color: red;
+        }
+
+        
+        .units {
+            font-size: 20px; 
+            width: 50%;      
+        }
+
+        .rem-example {
+            font-size: 2rem;
+        }
+
+        .em-example {
+            font-size: 2em;
+        }
+
+        
+        .background {
+            background-color: lightgreen;
+            background-image: url('https://via.placeholder.com/150');
+            background-repeat: no-repeat;
+            background-position: right;
+        }
+
+    
+        .text-style {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        /* Flexbox */
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: #ddd;
+            padding: 20px;
+        }
+
+        .flex-item {
+            background: coral;
+            padding: 20px;
+        }
+
+        /* Grid */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .grid-item {
+            background: lightcoral;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Layout */
+        .layout {
+            display: flex;
+        }
+
+        .sidebar {
+            width: 25%;
+            background: #333;
+            color: white;
+            padding: 20px;
+        }
+
+        .content {
+            width: 75%;
+            padding: 20px;
+        }
+
+    
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+
+        
+        input, textarea {
+            display: block;
+            margin: 10px 0;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <h1>HTML & CSS Example</h1>
+    <div class="box">This is a div (Block Element)</div>
+    <p>This is a paragraph (Block Element)</p>
+
+    <span id="special">This is a span (Inline Element)</span>
+    <a href="#">This is a link</a>
+
+    
+    <img src="1.jpg" alt="Sample Image" width="100">
+
+    
+    <h2>Lists</h2>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+    </ul>
+
+    <ol>
+        <li>Step 1</li>
+        <li>Step 2</li>
+    </ol>
+
+    
+    <h2>Table</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>25</td>
+        </tr>
+    </table>
+
+
+    <h2>Form</h2>
+    <form>
+        <input type="text" placeholder="Enter Name">
+        <input type="email" placeholder="Enter Email">
+        <textarea placeholder="Your Message"></textarea>
+        <button type="submit">Submit</button>
+    </form>
+
+
+    <div class="box background">
+        Div wrapping example with background
+    </div>
+
+    
+    <div class="text-style">
+        Typography Example
+    </div>
+
+    
+    <div class="units">Percentage Width</div>
+    <div class="rem-example">REM Example</div>
+    <div class="em-example">EM Example</div>
+
+
+    <div class="flex-container">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+    </div>
+
+    
+    
+    <div class="grid-container">
+        <div class="grid-item">A</div>
+        <div class="grid-item">B</div>
+        <div class="grid-item">C</div>
+    </div>
+
+    
+    
+    <div class="layout">
+        <div class="sidebar">Sidebar</div>
+        <div class="content">Main Content Area</div>
+    </div>
+
+</body>
+</html>
