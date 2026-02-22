@@ -1,32 +1,4 @@
-// import { useParams } from "react-router-dom";
-// import { Products } from "/src/data/Products.js";
-// import { useContext } from "react";
-// import { CartContext } from "../Context/CartContext";
 
-
-
-// function ProductDetails() {
-//   const { id } = useParams();
-//    const { addToCart } = useContext(CartContext);
-//   const product = Products.find((p) => p.id === Number(id));
-
-//   return (
-//     <div>
-//       <h2>{product.name}</h2>
-
-//       <img src={product.image} alt={product.name} width="200" />
-
-//       <p><strong>Brand:</strong> {product.brand}</p>
-//       <p><strong>Category:</strong> {product.category}</p>
-//       <p><strong>Rating:</strong> {product.rating}</p>
-//       <p><strong>Stock:</strong> {product.stock}</p>
-
-//       <p>{product.description}</p>
-//       <p><strong>Price:</strong> ${product.price}</p>
-//     </div>
-//   );
-// }
-// export default ProductDetails;
 
 import { useParams } from "react-router-dom";
 import { Products } from "../data/Products";
