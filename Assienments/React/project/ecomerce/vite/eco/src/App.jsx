@@ -139,13 +139,14 @@ import Cart from "./pages/Cart";
 import ProductDetails from "./pages/ProductDetails";
 import ProtectedRoute from "./components/ProtectedRoute";
 
+
 function App() {
   const [search, setSearch] = useState("");
 
   return (
     <AuthProvider>
       <CartProvider>
-        <Navbar search={search} setSearch={setSearch} />
+        <Navbar search={search} setSearch={setSearch}  />
 
         <Routes>
           <Route path="/" element={<Home search={search} />} />
@@ -162,6 +163,7 @@ function App() {
           />
         </Routes>
       </CartProvider>
+    
     </AuthProvider>
   );
 }

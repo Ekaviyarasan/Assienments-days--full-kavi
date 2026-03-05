@@ -14,6 +14,7 @@ function AdvertisementPage() {
         style={{
           textAlign: "center",
           marginBottom: "50px",
+          backgroundColor:"pink"
         }}
       >
         <h1 style={{ fontSize: "48px", color: "#222" }}>
@@ -33,6 +34,8 @@ function AdvertisementPage() {
               borderRadius: "8px",
               fontSize: "16px",
               cursor: "pointer",
+              
+              
             }}
           >
             Explore All Products

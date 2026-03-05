@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function ProductCard({ product }) {
   return (
-    <div style={{ border: "1px solid #ccc", padding: "15px" }}>
+    <div style={{ border: "1px solid #e0e6e6", padding: "15px" }}>
       <img src={product.image} alt={product.name} width="200" />
       <h3>{product.name}</h3>
       <p>${product.price}</p>

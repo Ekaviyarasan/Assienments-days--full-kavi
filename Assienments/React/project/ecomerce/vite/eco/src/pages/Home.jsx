@@ -10,7 +10,7 @@ function Home({ search = "" }) {
 
   return (
     <div style={{ padding: "20px" }}>
-      <h1 style={{ textAlign: "center" }}>MASS MENS WEAR</h1>
+      <h1 style={{ textAlign: "center", backgroundcolor:"pink" , color:"white"}}>UNIQUE MENS WEAR</h1>
 
       <div
         style={{

@@ -39,8 +39,15 @@ function ProductDetails() {
 
       <img src={product.image} width="300" alt={product.name} />
 
-      <p><b>Brand:</b> {product.brand}</p>
+      <p><b>Name:</b> {product.name}</p>
       <p><b>Price:</b> ₹{product.price}</p>
+      <p><b>Description:</b> {product.description}</p>
+      <p><b>Category:</b> {product.category}</p>
+      <p><b>Brand:</b> {product.brand}</p>
+      <p><b>Stock:</b> {product.stock}</p>
+      <p><b>Rating:</b> {product.rating}</p>
+       <p><b>color:</b> {product.color}</p>
+        
 
       <button onClick={handleAddToCart}>
         Add to Cart
