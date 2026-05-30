@@ -131,14 +131,18 @@ import { useState } from "react";
 
 import { AuthProvider } from "./Context/AuthContext";
 import { CartProvider } from "./Context/CartContext";
+import { WishlistProvider } from "./Context/WishlistContext";
 
 import Navbar from "./components/Navbar";
+import Landing from "./pages/Landing";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Cart from "./pages/Cart";
 import ProductDetails from "./pages/ProductDetails";
+import AdvertisementPage from "./pages/AdvertisementPages";
+import Dashboard from "./pages/Dashboard";
+import Wishlist from "./pages/Wishlist";
 import ProtectedRoute from "./components/ProtectedRoute";
-
 
 function App() {
   const [search, setSearch] = useState("");
@@ -146,13 +150,25 @@ function App() {
   return (
     <AuthProvider>
       <CartProvider>
-        <Navbar search={search} setSearch={setSearch}  />
+        <WishlistProvider>
+        <Navbar search={search} setSearch={setSearch} />
 
         <Routes>
-          <Route path="/" element={<Home search={search} />} />
+          <Route path="/" element={<Login />} />
+          <Route path="/landing" element={<Landing />} />
+          <Route path="/products" element={<Home search={search} />} />
+          <Route path="/ad" element={<AdvertisementPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/cart" element={<Cart />} />
-
+          <Route path="/wishlist" element={<Wishlist />} />
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          />
           <Route
             path="/product/:id"
             element={
@@ -161,9 +177,10 @@ function App() {
               </ProtectedRoute>
             }
           />
+          <Route path="*" element={<Login />} />
         </Routes>
+        </WishlistProvider>
       </CartProvider>
-    
     </AuthProvider>
   );
 }
