@@ -22,7 +22,7 @@ function Home({ search = "" }) {
   return (
     <div className="p-6 bg-blue-50 min-h-screen">
       <section className="mb-8 p-6 bg-linear-to-br from-white to-blue-100 rounded-3xl shadow-lg">
-        <h1 className="text-center text-blue-800 mb-2">Unique Mens Wear</h1>
+        <h1 className="text-center text-blue-800 mb-2">Mass Mens Wear</h1>
         <p className="text-center text-gray-600 max-w-2xl mx-auto">
           Find premium shirts, jackets, accessories, and curated deals. Use filters to discover the perfect fit fast.
         </p>
